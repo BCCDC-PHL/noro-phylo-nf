@@ -1,2 +1,2 @@
-# noro-phylo
+# noro-phylo-nf
 Pipeline for performing multiple sequence alignment and phylogenetic tree construction on NGS norovirus seuqence sequence data. 
