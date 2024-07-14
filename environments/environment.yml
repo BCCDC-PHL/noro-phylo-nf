@@ -1,0 +1,7 @@
+name: noro-phylo-nf
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - augur=25.1.0
