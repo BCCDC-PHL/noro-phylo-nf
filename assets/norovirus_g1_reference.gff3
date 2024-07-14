@@ -1,0 +1,21 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_001959.2 1 7654
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=122928
+NC_001959.2	RefSeq	region	1	7654	.	+	.	ID=NC_001959.2:1..7654;Dbxref=taxon:122928;gbkey=Src;genome=genomic;mol_type=genomic RNA
+NC_001959.2	RefSeq	five_prime_UTR	1	4	.	+	.	ID=id-NC_001959.2:1..4;gbkey=5'UTR
+NC_001959.2	RefSeq	gene	5	5374	.	+	.	ID=gene-NoVGI_gp1;Dbxref=GeneID:1491970;Name=ORF1;gbkey=Gene;gene=ORF1;gene_biotype=protein_coding;locus_tag=NoVGI_gp1;old_locus_tag=NVgp1
+NC_001959.2	RefSeq	CDS	5	5374	.	+	0	ID=cds-NP_056820.1;Parent=gene-NoVGI_gp1;Dbxref=GenBank:NP_056820.1,GeneID:1491970;Name=NP_056820.1;Note=ORF1%3B sequence homologies to 2C helicase%2C 3C protease%2C and 3D RNA-dependent RNA polymerase of picornavirus;gbkey=CDS;gene=ORF1;locus_tag=NoVGI_gp1;product=nonstructural polyprotein;protein_id=NP_056820.1
+NC_001959.2	RefSeq	mature_protein_region_of_CDS	5	1198	.	+	.	ID=id-NP_056820.1:1..398;Note=N-terminal leader p48%3B 2A2-2B-like membrane protein%3B distant homolog of H-rev107-like parechovirus 2a2%2C a putative regulator of cell proliferation%3B the c-terminal membrane-binding portion contributes to the Golgi disassembly and%2C therefore%2C functionally similar to the picornavirus 2B protein;Parent=cds-NP_056820.1;gbkey=Prot;product=p48;protein_id=NP_786945.1
+NC_001959.2	RefSeq	mature_protein_region_of_CDS	1199	2287	.	+	.	ID=id-NP_056820.1:399..761;Note=2C-L%3B probable ortholog of the 2C protein of picornaviruses%3B the calicivirus NTPase was found in membranous replication complexes;Parent=cds-NP_056820.1;gbkey=Prot;product=NTPase;protein_id=NP_786946.1
+NC_001959.2	RefSeq	mature_protein_region_of_CDS	2288	2890	.	+	.	ID=id-NP_056820.1:762..962;Note=3A-L%3B located in the polyprotein between NTPase and VPg%3B second most variable region of the calicivirus polyprotein%3B the FCV ortholog was detected in membranous replication complexes;Parent=cds-NP_056820.1;gbkey=Prot;product=p22;protein_id=NP_786947.1
+NC_001959.2	RefSeq	mature_protein_region_of_CDS	2891	3304	.	+	.	ID=id-NP_056820.1:963..1100;Note=For Southampton calicivirus%2C both N-terminal and C-terminal cleavage sites have been confirmed by direct sequencing. In caliciviruses%2C VPg can also exist in the form of precursor with the upstream protein which is thought to function as a membrane anchor;Parent=cds-NP_056820.1;gbkey=Prot;product=VPg;protein_id=NP_786948.1
+NC_001959.2	RefSeq	mature_protein_region_of_CDS	3305	3847	.	+	.	ID=id-NP_056820.1:1101..1281;Note=Chymotrypsin-like cysteine proteinase%3B For Southampton calicivirus%2C both N-terminal and C-terminal cleavage sites have been confirmed by direct sequencing. The FCV proteinase (Pro) can exist in the form of a stable Pro-Pol precursor;Parent=cds-NP_056820.1;gbkey=Prot;product=Pro;protein_id=NP_786949.1
+NC_001959.2	RefSeq	mature_protein_region_of_CDS	3848	5371	.	+	.	ID=id-NP_056820.1:1282..1789;Note=the FCV polymerase (Pol) can exist in the form of a stable Pro-Pol precursor%3B RNA-dependent RNA polymerase;Parent=cds-NP_056820.1;gbkey=Prot;product=RdRp;protein_id=NP_786950.1
+NC_001959.2	RefSeq	gene	5358	6950	.	+	.	ID=gene-NoVGI_gp2;Dbxref=GeneID:1491972;Name=ORF2;gbkey=Gene;gene=ORF2;gene_biotype=protein_coding;locus_tag=NoVGI_gp2;old_locus_tag=NVgp2
+NC_001959.2	RefSeq	CDS	5358	6950	.	+	0	ID=cds-NP_056821.2;Parent=gene-NoVGI_gp2;Dbxref=GenBank:NP_056821.2,GeneID:1491972;Name=NP_056821.2;Note=ORF2%3B 58kd capsid protein%3B major capsid protein;gbkey=CDS;gene=ORF2;locus_tag=NoVGI_gp2;product=VP1;protein_id=NP_056821.2
+NC_001959.2	RefSeq	gene	6950	7588	.	+	.	ID=gene-NoVGI_gp3;Dbxref=GeneID:1491971;Name=ORF3;gbkey=Gene;gene=ORF3;gene_biotype=protein_coding;locus_tag=NoVGI_gp3;old_locus_tag=NVgp3
+NC_001959.2	RefSeq	CDS	6950	7588	.	+	0	ID=cds-NP_056822.1;Parent=gene-NoVGI_gp3;Dbxref=GenBank:NP_056822.1,GeneID:1491971;Name=NP_056822.1;Note=ORF3%3B minor structural protein%3B small basic protein;gbkey=CDS;gene=ORF3;locus_tag=NoVGI_gp3;product=VP2;protein_id=NP_056822.1
+NC_001959.2	RefSeq	three_prime_UTR	7589	7654	.	+	.	ID=id-NC_001959.2:7589..7654;gbkey=3'UTR
+
