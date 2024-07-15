@@ -1,4 +1,5 @@
-# noro-phylo-nf
-Pipeline for performing multiple sequence alignment and phylogenetic tree construction / annotation. 
+# Norovirus Phylogenetics Pipeline
+
+This is a bioinformatics pipeline for building interactive norovirus phylogenetics trees that can be visualized using the Augur / Nextstrain / Auspice workflow. 
 
 
