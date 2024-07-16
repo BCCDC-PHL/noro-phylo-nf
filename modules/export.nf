@@ -9,7 +9,7 @@ process export {
 	tuple path(config_auspice), path(config_colors), path(config_lat_long)
 
 	output:
-	path("flu.json")
+	path("${params.run_name}.json")
 
 	script:
 	metadata = metadata.name == 'NO_FILE' ? "" : "--metadata ${metadata}"
@@ -19,12 +19,12 @@ process export {
 
 	augur export v2 \
 		--tree ${tree_refine} \
-		--metadata ${metadata} \
+		${metadata} \
 		--node-data ${node_data} \
 		--colors ${config_colors} \
 		--lat-longs ${config_lat_long} \
 		--minify-json \
 		--auspice-config ${config_auspice} \
-		--output flu.json
+		--output ${params.run_name}.json
 	"""
 }

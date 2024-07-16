@@ -9,7 +9,7 @@ process translate {
 	path(node_data_ancestral)
 
 	output:
-	path("node_data_translate.json")
+	path("node_data_translate.json"), emit: node_data
 
 	"""
 	augur translate \

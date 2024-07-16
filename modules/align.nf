@@ -17,6 +17,8 @@ process concat_sequences {
 
 process align {
 
+	label "heavy"
+
 	tag "Aligning Sequences"
 	publishDir "${params.outdir}/align/", mode: 'copy'
 
