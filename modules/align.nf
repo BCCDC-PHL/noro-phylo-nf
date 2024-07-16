@@ -5,14 +5,13 @@ process concat_sequences {
 	publishDir "${params.outdir}/align/", mode: 'copy'
 
 	input:
-	path(input_folder)
-	val(glob_pattern)
+	path(fasta_files)
 
 	output:
 	path("concatenated.fasta")
 
 	"""
-	cat ${input_folder}/${glob_pattern} > concatenated.fasta
+	cat ${fasta_files} > concatenated.fasta
 	"""
 }
 
