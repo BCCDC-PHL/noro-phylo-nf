@@ -1,0 +1,101 @@
+{
+  "title": " Nextstrain build for Influenza 2020-2023November22 segment HA",
+  "colorings": [
+    {
+      "key": "gt",
+      "title": "Genotype",
+      "type": "categorical"
+    },
+    {
+      "key": "Country",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "Province or State",
+      "title": "Province or State",
+      "type": "categorical"
+    },
+    {
+      "key": "subtype",
+      "title": "subtype",
+      "type": "categorical"
+    },
+    {
+      "key": "AHC Case",
+      "title": "AHC Case",
+      "type": "categorical"
+    },
+    {
+      "key": "Collection Site Type",
+      "title": "Collection Site Type",
+      "type": "categorical"
+    },
+    {
+      "key": "Collection Premise",
+      "title": "Collection Premise",
+      "type": "categorical"
+    },
+    {
+      "key": "Collection Region",
+      "title": "Collection Region",
+      "type": "categorical"
+    },
+    {
+      "key": "Health Authority",
+      "title": "Health Authority",
+      "type": "categorical"
+    },
+      {
+      "key": "month",
+      "title": "month",
+      "type": "categorical"
+    },
+      {
+      "key": "Source",
+      "title": "Source",
+      "type": "categorical"
+    },
+      {
+      "key": "New",
+      "title": "New",
+      "type": "categorical"
+    },
+      {
+      "key": "MammalvsBird",
+      "title": "MammalvsBird",
+      "type": "categorical"
+    },
+      {
+      "key": "Genomic Cluster",
+      "title": "Genomic Cluster",
+      "type": "categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "Health Authority"
+  ],
+  "panels": [
+     "tree",
+     "map",
+     "entropy"
+  ],
+  "display_defaults": {
+    "map_triplicate": true
+  },
+  "filters": [
+    "Country",
+    "Health Authority",
+    "Collection Region",
+    "Collection Premise",
+    "Collection Site Type",
+    "AHC Case",
+    "subtype",
+    "Province or State",
+    "month",
+	"Source",
+	"New",
+	"MammalvsBird",
+	"Genomic Cluster"
+  ]
+}
