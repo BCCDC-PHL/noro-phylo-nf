@@ -13,6 +13,7 @@ include { tree  				   } from './modules/tree.nf'
 include { refine  				   } from './modules/refine.nf'
 include { ancestral  		       } from './modules/ancestral.nf'
 include { translate  		       } from './modules/translate.nf'
+include { export  		       } from './modules/export.nf'
 
 println "${LocalDateTime.now()}"
 
@@ -40,6 +41,8 @@ workflow {
     ch_metadata = params.metadata == 'NO_FILE' ? Channel.fromPath('NO_FILE') : Channel.fromPath(params.metadata)
 
 
+    ch_config = Channel.fromPath([params.config_auspice, params.config_colors, params.config_lat_long]).collect()
+
     // Catch invalid reference input combinations 
     reference_gb_format = (params.ref =~ /.+\.[Gg]b$/)
 
@@ -60,8 +63,9 @@ workflow {
 
     main:  
 
-        if (params.input_dir && params.glob_pattern) {
-            ch_multifasta = concat_sequences(params.input_dir, params.glob_pattern)
+        if (params.fasta_dir) {
+            ch_fasta_files = Channel.fromPath(params.fasta_search_paths)
+            ch_multifasta = concat_sequences(ch_fasta_files.collect())
         }else {
             ch_multifasta = Channel.fromPath(params.sequences)
         }
@@ -76,4 +80,17 @@ workflow {
         ancestral(refine.out.tree, align.out)
 
         translate(refine.out.tree, ch_reference_annotation, ancestral.out.node_data)
+
+        ch_node_data = Channel.empty()
+        ch_node_data = ch_node_data.mix(refine.out.node_data)
+        ch_node_data = ch_node_data.mix(ancestral.out.node_data)
+        ch_node_data = ch_node_data.mix(translate.out.node_data)
+        ch_node_data = ch_node_data.collect()
+
+        export(
+            refine.out.tree, 
+            ch_metadata, 
+            ch_node_data,
+            ch_config
+        )
 }
